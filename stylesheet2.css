@@ -1,8 +1,6 @@
 .square {
-
 	margin-top: 30px;
 top: 0px;
-
 	height: 15px;
   width: 15px;
   background-color: #FFFFFF;
@@ -30,8 +28,6 @@ background: linear-gradient(180deg, #3719FB 22.4%, rgba(255, 71, 0, 0.306581) 65
 body{
 Background : black; 
 margin: auto;
-
-
 width: 70%;
 Font-family: Garamond;
 Color: white;
@@ -102,21 +98,14 @@ Padding: 10;
 
 }
 
-.thumbnailLEFT {
-  width: 200px; /* This sets the width of the thumbnail images */
-  height: 200px; /* This sets the height of the thumbnail images */
-  object-fit: cover; /* This crops the images to a square shape */
-padding:10px
 
-}
-
-
-.thumbnailLEFT:hover {
-padding-left:100px;
-  transform: scale(1.1); 
-  transition: transform 0.3s ease-in-out; /* This adds a transition effect when the hover state is triggered */
-  object-fit: cover; /* This prevents the images from being cropped */
-	z-index: 2;
-Padding: 10;
-
-}
+/* ===== Scrollbar DISSABLE ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: none;
+    scrollbar-color: #000000 #ffffff;
+  }
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 0px;
+  }
