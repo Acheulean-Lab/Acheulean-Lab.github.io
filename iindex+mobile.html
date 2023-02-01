@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<title>ACHEULEAN LAB</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class=" w-9/10 mx-20 sm:w-7/10 sm:mx-40vw  leading-tight  text-lg sm:text-base ">
+
+<div class="square invisible md:visible "id="square1"></div>
+<div class="bar invisible md:visible "id="bar1"></div>
+</br>
+<img  src="ACHEULEANLABHEADER.gif" style="width:40%; min-width:225px ;">
+
+
+<p class=" tracking-[.35vw] text-[5.25vw] font-bold pt-10 pb-4">ACHEULEAN LAB</p>
+
+<p > Acheulean Lab is a design research project examining material culture.</p>
+		<p>Acheleuan Lab creates opportunities for examination, wonder, and delight in the ordinary. When the mundane is reframed as extraordinary the habitual becomes novel. Awareness of the normal leads to perception of the forces that shape our hegemonies, systems, and cultures, and critical reflection. Often, the most engaging phenomena are the inexplicable and uncertain.Through study of human response to objects Acheulean Lab aims to develop methods to build a more nurturing world. </p> 
+
+
+</br>
+
+<p class="text-[1.175rem] font-black py-4"> Project Etymology: </p>
+<p>The Acheulean Handaxe is a cordiform biface stone tool manufactured by early humans across Africa Europe and Asia during the Lower and Middle Pleistocene. In use for over a million and a half years, from 1.7 to 0.1 Mya without revision, the Acheulean Handaxe is the most successful designed object in history. Despite prolific distribution, the function these objects served is not known. The razor-sharp circumference yields an edge impossible to hold, signaling that the handaxe form is more than pragmatic. It is unclear if the tool was used for its blade, as an object of ceremony, or to convey ones status or worth. The only certainty is the consistency of its form and technique of manufacture. </p>
+
+<p>The Acheulean Handaxe is the origin of design; an object produced with intent and inherited cultural knowledge. Acheulean Lab pays homage to this universal human artifact and views it as the archetype for compelling objects that offer engagement above a sensory level. </p>
+
+		<p>The work produced in this Lab is by nature an experiment. 2022 -</p>
+
+
+</br>
+
+<p class="text-[1.175rem] font-black py-4"> Areas of Research </p>
+<a class="underline"href="#nongraphic_interfaces"> Non-Graphic Interfaces </a></br>
+
+<a class="underline"href="#Actant_Objects"> Actant Objects </a></br>
+
+<a class="underline"href="#Frameworks"> Frameworks </a></br>
+
+<a class="underline"href="#unclassified_experiments"> Unclassified Experiments </a></br>
+</br>
+</br>
+
+<p class="text-[1.175rem] font-black py-2" id="nongraphic_interfaces">Non-Graphic Interfaces </p>
+<p class="pb-2">Possibilities for human computer interaction that do not rely on visual systems. Alternatives to the digital displays that have come to dominate information transfer.</p>
+<details>
+  <summary>ROCKBELL</summary>
+  <p class="pt-4">Strike one rock with another to trigger a ring. Replace a button with a mindful act.</p>
+<div class="gallery" onclick="openModal('modal RB')">
+  <img src="rb001.jpg" class="thumbnail">
+  <img src="rb002.jpg" class="thumbnail">
+</br>
+</div>
+</details>
+<details>
+  <summary>SONIC THERMOMETER</summary>
+  <p class="pt-4">How does the practice of healthcare change when we emphasize sensory information over absolute measurements and values? This thermometer reminds the user to pay close attention to signals from their body, and that sickness and health are more than binary. This device produces two tones, one effected by the user’s temperature. The device is tuned so a healthy temperature will align the two sound waves and a slight fever will prevent the tones from synchronizing. Place device to forehead and listen (closely) to your body.
+</p>
+<div class="gallery" onclick="openModal('modal AT')">
+  <img  src="at001.jpg"class="thumbnail">
+  <img  src="at002.jpg"class="thumbnail">
+  <img  src="at003.jpg"class="thumbnail">
+  <img  src="at004.jpg"class="thumbnail">
+</details>
+</br>
+</br>
+
+
+
+<p class="text-[1.175rem] font-black py-2" id="Actant_Objects"> Actant Objects </p>
+<p class="pb-2"> Objects that affect or respond to their environment. Dynamism through action and reaction to prevent sterility.  </p>
+<details>
+  <summary>SUNLIGHT</summary>
+  <p class="pt-4">Sunlight simulates a skylight. Moving light source with shifting colors to mimic the Sun's passage. </p>
+</details>
+</br>
+</br>
+
+
+<p class="text-[1.175rem] font-black py-2" id="Frameworks"> Frameworks </p>
+<p class="pb-2"> Systems for bilding. User defines application. </p>
+</br>
+</br>
+
+<p class="text-[1.175rem] font-black py-2" id="unclassified_experiments"> Unclassified Experiments </p>
+<p class="pb-2">Projects for which a category has not yet been defined or where questions still search for their words. </p>
+<details>
+ <summary>SLIP</summary>
+ <p class="pt-4">A sheer and near weightless slip dress, made of a fully waterproof material. Stronger than steel by weight. Transparent armor, delicate impermeability. The wearer is fully presented but unaffected by outside forces.</p>
+
+<div class="gallery" onclick="openModal('modal SD')">
+<img  src="slip images/slip001.jpg"class="thumbnail">
+<img  src="slip images/slip002.jpg"class="thumbnail">
+<img  src="slip images/slip003.jpg"class="thumbnail">
+<img  src="slip images/slip004.jpg"class="thumbnail">
+<img  src="slip images/slip006.jpg"class="thumbnail">
+<img  src="slip images/slip007.jpg"class="thumbnail">
+<img  src="slip images/slip005.jpg"class="thumbnail">
+<img  src="slip images/slip008.jpg"class="thumbnail">
+</br>
+</div>
+</details>
+
+<details>
+ <summary>FISHCASE</summary>
+  <p class="pt-4">...</p>
+<div class="gallery" onclick="openModal('modal FC')">
+<img  src="fishgif.gif" class="thumbnail" style="width: 60%; max-width:500px; height: auto; vertical-align: middle;   object-fit: contain;" >
+</br>
+</div>
+</details>
+</br>
+</br>
+
+</body>
+
+<!-- SCROLL SCRIPT -->
+<script>
+
+// When the user scrolls the page, execute myFunction 
+window.onscroll = function() {myFunction()};
+
+
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = ((winScroll / height) * 85) ;
+
+
+  document.getElementById("square1").style.top = scrolled  + "%";
+	
+}
+</script>
+
+
+
+<div id="modal RB" class="fixed hidden z-50 inset-0 bg-black bg-opacity-80 overflow-y-auto h-full w-full px-4 modal "onclick="closeModal('modal RB')">
+  <div class="relative container mx-auto w-3/5 max-h-8/9 pt-10 bg-black bg-opacity-0" >
+      <style>
+          /* ===== Scrollbar CSS ===== */
+            /* Firefox */
+            * {
+              scrollbar-width: none;
+              scrollbar-color: #000000 #ffffff;
+            }
+          
+            /* Chrome, Edge, and Safari */
+            *::-webkit-scrollbar {
+              width: 0px;
+            }
+          </style>
+
+      <!-- Modal header -->
+      <div class="text-right px-5  ">
+          <button class="text-white text-right bg-opacity-0 top-0px font-size-30px font-weight-black "onclick="closeModal('modal RB')">⨉</button>
+
+
+      </div>
+
+      <!-- Modal body -->
+      <div class=" flex flex-direction-row flex-nowrap overflow-y-none overflow-x-scroll p-5   ">
+          <img src="rb001.jpg" class= "object-contain h-[70vh]">
+          <img src="rb002.jpg" class="object-contain h-[70vh] pl-5">
+
+      </div>
+
+      <!-- Modal footer -->
+    <!-- <div class="px-4 py-2 border-t border-t-gray-500 flex justify-end items-center space-x-4">
+       <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition" onclick="closeModal('modal')">Close (ESC)</button>
+      </div> -->
+  </div>
+</div>
+
+<div id="modal AT" class="fixed hidden z-50 inset-0 bg-black bg-opacity-80 overflow-y-auto h-full w-full px-4 modal"onclick="closeModal('modal AT')">
+  <div class="relative container mx-auto w-3/5 max-h-8/9 pt-10 bg-black bg-opacity-0" >
+      <style>
+          /* ===== Scrollbar CSS ===== */
+            /* Firefox */
+            * {
+              scrollbar-width: none;
+              scrollbar-color: #000000 #ffffff;
+            }
+          
+            /* Chrome, Edge, and Safari */
+            *::-webkit-scrollbar {
+              width: 0px;
+            }
+          </style>
+
+      <!-- Modal header -->
+      <div class="text-right px-5  ">
+          <button class="text-white text-right bg-opacity-0 top-0px font-size-30px font-weight-black "onclick="closeModal('modal AT')">⨉</button>
+
+
+      </div>
+
+      <!-- Modal body -->
+      <div class=" flex flex-direction-row flex-nowrap overflow-y-none overflow-x-scroll p-5   ">
+          <img src="at001.jpg" class= "object-contain h-[70vh]">
+          <img src="at002.jpg" class="object-contain h-[70vh] pl-5">
+          <img src="at003.jpg" class="object-contain h-[70vh] pl-5">
+          <img src="at004.jpg" class="object-contain h-[70vh] pl-5">
+
+      </div>
+
+      <!-- Modal footer -->
+    <!-- <div class="px-4 py-2 border-t border-t-gray-500 flex justify-end items-center space-x-4">
+       <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition" onclick="closeModal('modal')">Close (ESC)</button>
+      </div> -->
+  </div>
+</div>
+
+<div id="modal SD" class="fixed hidden z-50 inset-0 bg-black bg-opacity-80 overflow-y-auto h-full w-full px-4 modal" onclick="closeModal('modal SD')">
+  <div class="relative container mx-auto w-3/5 max-h-8/9 pt-10 bg-black bg-opacity-0" >
+      <style>
+          /* ===== Scrollbar CSS ===== */
+            /* Firefox */
+            * {
+              scrollbar-width: none;
+              scrollbar-color: #000000 #ffffff;
+            }
+          
+            /* Chrome, Edge, and Safari */
+            *::-webkit-scrollbar {
+              width: 0px;
+            }
+          </style>
+
+      <!-- Modal header -->
+      <div class="text-right px-5  ">
+          <button class="text-white text-right bg-opacity-0 top-0px font-size-30px font-weight-black "onclick="closeModal('modal SD')">⨉</button>
+
+
+      </div>
+
+      <!-- Modal body -->
+      <div class=" flex flex-direction-row flex-nowrap overflow-y-none overflow-x-scroll p-5   " >
+        <img  src="slip images/slip002.jpg"class="object-contain h-[70vh] pl-5">
+        <img  src="slip images/slip001.jpg"class="object-contain h-[70vh] pl-5">
+        <img  src="slip images/slip003.jpg"class="object-contain h-[70vh] pl-5">
+        <img  src="slip images/slip004.jpg"class="object-contain h-[70vh] pl-5">
+        <img  src="slip images/slip006.jpg"class="object-contain h-[70vh] pl-5">
+        <img  src="slip images/slip007.jpg"class="object-contain h-[70vh] pl-5">
+        <img  src="slip images/slip005.jpg"class="object-contain h-[70vh] pl-5">
+        <img  src="slip images/slip008.jpg"class="object-contain h-[70vh] pl-5">
+      </div>
+
+      <!-- Modal footer -->
+    <!-- <div class="px-4 py-2 border-t border-t-gray-500 flex justify-end items-center space-x-4">
+       <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition" onclick="closeModal('modal')">Close (ESC)</button>
+      </div> -->
+  </div>
+</div>
+
+<div id="modal FC" class="fixed hidden z-50 inset-0 bg-black bg-opacity-80 overflow-y-auto h-full w-full px-4  modal" onclick="closeModal('modal FC')">
+  <div class="relative container justify-center mx-auto w-3/4 max-h-8/9 pt-10 bg-black bg-opacity-0" >
+      <style>
+          /* ===== Scrollbar CSS ===== */
+            /* Firefox */
+            * {
+              scrollbar-width: none;
+              scrollbar-color: #000000 #ffffff;
+            }
+          
+            /* Chrome, Edge, and Safari */
+            *::-webkit-scrollbar {
+              width: 0px;
+            }
+          </style>
+
+      <!-- Modal header -->
+      <div class="text-right px-5  ">
+          <button class="text-white text-right bg-opacity-0 top-0px font-size-30px font-weight-black "onclick="closeModal('modal FC')">⨉</button>
+
+
+      </div>
+
+      <!-- Modal body -->
+      <div class=" p-5    ">
+          <img src="fishgif.gif" class= "object-contain mx-auto [min-width-250px] h-[65vh] ">
+
+      </div>
+
+  </div>
+</div>
+
+
+<!-- Modal SCRIPT -->
+<script type="text/javascript">
+  window.openModal = function(modalId) {
+    document.getElementById(modalId).style.display = 'block'
+    document.getElementsByTagName('body')[0].classList.add('overflow-y-hidden')
+  }
+  
+  window.closeModal = function(modalId) {
+    document.getElementById(modalId).style.display = 'none'
+    document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
+  }
+  
+  // Close all modals when press ESC
+  document.onkeydown = function(event) {
+    event = event || window.event;
+    if (event.keyCode === 27) {
+      document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
+      let modals = document.getElementsByClassName('modal');
+      Array.prototype.slice.call(modals).forEach(i => {
+        i.style.display = 'none'
+      })
+    }
+  };
+  </script>
+  
+
+
+  <style>
+
+  .square {
+	margin-top: 30px;
+ top: 0px;
+	height: 15px;
+  width: 15px;
+  background-color: #FFFFFF;
+position: fixed;
+	right: 15px;
+z-index: 0;
+	transition: width 0.2s ease-out;
+}
+
+.bar {
+ position: fixed;
+	top: 15px;
+	right: 15px;
+	height: 80%;
+background: linear-gradient(180deg, #3719FB 22.4%, rgba(255, 71, 0, 0.306581) 65.1%, rgba(217, 217, 217, 0) 91.15%);	width: 15px;
+	z-index: -2;
+	
+}
+
+
+body{
+Background : black; 
+Font-family: Garamond;
+Color: white;
+}
+
+P{
+Font-family: Times new roman; 
+font-weight: normal;
+letter-spacing: 0px; 
+Color: white; 
+margin-bottom: 8px;
+}
+
+
+
+/* unvisited link */
+a:link {
+  color: white;
+}
+
+/* visited link */
+a:visited {
+  color: white;
+}
+
+/* mouse over link */
+a:hover {
+  color: rgb(0, 59, 255);
+}
+
+/* selected link */
+a:active {
+  color: white;
+} 
+
+
+
+.gallery {
+  display: flex;
+ flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: left;
+ overflow-x: scroll; 
+  height: 225px; 
+  align-items: center;
+}
+
+
+.thumbnail {
+  width: 200px; /* This sets the width of the thumbnail images */
+  height: 200px; /* This sets the height of the thumbnail images */
+  object-fit: cover; /* This crops the images to a square shape */
+padding:10px
+
+}
+
+.thumbnail:hover {
+  transform: scale(1.1); 
+  transition: transform 0.3s ease-in-out; /* This adds a transition effect when the hover state is triggered */
+  object-fit: cover; /* This prevents the images from being cropped */
+	z-index: 2;
+Padding: 10;
+
+}
+
+
+/* ===== Scrollbar DISSABLE ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: none;
+    scrollbar-color: #000000 #ffffff;
+  }
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 0px;
+  }
+    
+  </style>
