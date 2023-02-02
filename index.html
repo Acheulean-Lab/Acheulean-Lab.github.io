@@ -31,7 +31,7 @@
   	<p class="pt-4">  2022 -</p>
 
 
-<button id="expall" onclick="textflip()" class=" outline-[1px] pb-8  text-white  hover:text-[#3719FB] text-[1.rem] font-black">Reveal All Projects</button> 
+<button id="expall" onclick="textflip()" class=" outline-[1px] py-8  text-white   text-[1.rem] font-black">Reveal All Projects</button> 
 
 </br>
 </br>
@@ -386,10 +386,11 @@ Color: white;
 margin-bottom: 8px;
 }
 
-
+@media (hover: hover) {
 summary:hover{
   color: rgb(0, 59, 255);
-}
+}}
+
 /* unvisited link */
 a:link {
   color: white;
@@ -401,8 +402,9 @@ a:visited {
 }
 
 /* mouse over link */
-a:hover {
+@media (hover: hover) {a:hover {
   color: rgb(0, 59, 255);
+}
 }
 
 /* selected link */
