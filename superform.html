@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+  <meta name="viewport" content="width=device-width">
+<meta name="viewport" content="initial-scale=1.0">
+<head> 
+<title>ACHEULEAN LAB</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="   w-100 sm:w-[70vw] px-8 sm:px-0 sm:max-w-3xl mx-auto  leading-tight">
+
+
+
+</br>
+
+
+<a href="https://www.acheuleanlab.com/"><img  src="ACHEULEANLABHEADER.gif" style="width:40%; min-width:225px ">
+</a></br>
+<p><a href="https://www.acheuleanlab.com/" class="text-[32px] tracking-[.35vw] sm:text-[5.25vw] font-bold pt-10 pb-0">← ACHEULEAN LAB</a></p>
+
+</br>
+<!-- <p><a href="https://www.acheuleanlab.com/" class=" button outline-[1px] py-8  text-white   text-[1.125rem] font-black " >← Home</a></p> -->
+
+
+
+
+
+
+
+
+<p>  Turn over stones, open drawers, sift through fragments, decipher glyphs in the concrete, pick out faces in the fire, greet the names on the wall, listen closely to the groans of weary timber, ask how or when or why this or that got here or there or nowhere to be found; an awareness of the everyday is at the foundation of a more complete world. When the mundane is acknowledged as extraordinary the habitual becomes novel. Often, the most engaging phenomena are the inexplicable and uncertain, and sometimes the most important thing is what we have learned to ignore. </p> 
+
+</br></br>
+
+<p class="text-[1.5rem] font-black py-2" id="nongraphic_interfaces">Cam Bench</p>
+</br>
+<p class="pb-2">project explanation.</p>
+  <p> </p>
+  <div class="pl-4">
+  <p class="pt-4"></p>
+<div class="gallery" onclick="openModal('modal RB')">
+  <img src="rb001.jpg" class="thumbnail">
+  <img src="rb002.jpg" class="thumbnail">
+</div>
+</div>
+<div class = "flex justify-center"> 
+  <div>
+  <iframe width="346" height="346" src="https://www.youtube.com/embed/tYDYNF2g9Fw" title="RB001" frameborder="0"
+    allow="accelerometer; clipboard-write; encrypted-media;" allowfullscreen></iframe></div>
+  
+  </div>
+
+</br>
+
+</body>
+
+
+
+
+<div id="modal RB" class="fixed hidden z-50 inset-0 bg-black bg-opacity-80 overflow-y-auto h-full w-full px-0 modal "onclick="closeModal('modal RB')">
+  <div class="relative container mx-auto px-4 w-100% sm:px-0 sm:w-3/5 pt-10 bg-black bg-opacity-0" >
+      <style>
+          /* ===== Scrollbar CSS ===== */
+            /* Firefox */
+            * {
+              scrollbar-width: none;
+              scrollbar-color: #000000 #ffffff;
+            }
+          
+            /* Chrome, Edge, and Safari */
+            *::-webkit-scrollbar {
+              width: 0px;
+            }
+          </style>
+
+      <!-- Modal header -->
+      <div class="text-right px-5  ">
+          <button class="text-white text-right bg-opacity-0 top-0px font-size-30px font-weight-black "onclick="closeModal('modal RB')">⨉</button>
+
+
+      </div>
+
+      <!-- Modal body -->
+      <div class=" flex flex-direction-row flex-nowrap overflow-y-none overflow-x-scroll p-5   ">
+          <img src="rb001.jpg" class= "object-contain h-[70vh]">
+          <img src="rb002.jpg" class="object-contain h-[70vh] pl-5">
+
+      </div>
+
+      <!-- Modal footer -->
+    <!-- <div class="px-4 py-2 border-t border-t-gray-500 flex justify-end items-center space-x-4">
+       <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition" onclick="closeModal('modal')">Close (ESC)</button>
+      </div> -->
+  </div>
+</div>
+
+
+
+
+<!-- Modal SCRIPT -->
+<script type="text/javascript">
+  window.openModal = function(modalId) {
+    document.getElementById(modalId).style.display = 'block'
+    document.getElementsByTagName('body')[0].classList.add('overflow-y-hidden')
+  }
+  
+  window.closeModal = function(modalId) {
+    document.getElementById(modalId).style.display = 'none'
+    document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
+  }
+  
+  // Close all modals when press ESC
+  document.onkeydown = function(event) {
+    event = event || window.event;
+    if (event.keyCode === 27) {
+      document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
+      let modals = document.getElementsByClassName('modal');
+      Array.prototype.slice.call(modals).forEach(i => {
+        i.style.display = 'none'
+      })
+    }
+  };
+  </script>
+  
+  
+
+
+
+  <style>
+
+  .square {
+	margin-top: 30px;
+ top: 0px;
+	height: 15px;
+  width: 15px;
+  background-color: #FFFFFF;
+position: fixed;
+	right: 15px;
+z-index: 0;
+	transition: width 0.2s ease-out;
+}
+
+.bar {
+ position: fixed;
+	top: 15px;
+	right: 15px;
+	height: 80%;
+background: linear-gradient(180deg, #3719FB 22.4%, rgba(255, 71, 0, 0.306581) 65.1%, rgba(217, 217, 217, 0) 91.15%);	width: 15px;
+	z-index: -2;
+	
+}
+
+
+body{
+Background : black; 
+Color: white;
+Font-family:Garamond; 
+
+}
+
+P{
+Font-family: Times; 
+font-weight: normal;
+letter-spacing: 0px; 
+Color: white; 
+margin-bottom: 8px;
+}
+
+
+
+@media (hover: hover) {
+summary:hover{
+  color: rgb(0, 59, 255);
+}}
+
+/* unvisited link */
+a:link {
+  color: white;
+}
+
+/* visited link */
+a:visited {
+  color: white;
+}
+
+/* mouse over link */
+@media (hover: hover) {a:hover {
+  color: rgb(0, 59, 255);
+}
+}
+
+/* selected link */
+a:active {
+  color: white;
+} 
+
+
+
+.gallery {
+  display: flex;
+ flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: left;
+ overflow-x: scroll; 
+  height: 225px; 
+  align-items: center;
+}
+
+.a{}
+
+.a:hover {
+  color: rgb(0, 59, 255);
+  transform: scale(1.1); 
+  transition: transform 0.3s ease-in-out; /* This adds a transition effect when the hover state is triggered */
+}
+
+.thumbnail {
+  width: 200px; /* This sets the width of the thumbnail images */
+  height: 200px; /* This sets the height of the thumbnail images */
+  object-fit: cover; /* This crops the images to a square shape */
+padding:10px
+
+}
+
+.thumbnail:hover {
+  transform: scale(1.1); 
+  transition: transform 0.3s ease-in-out; /* This adds a transition effect when the hover state is triggered */
+  object-fit: cover; /* This prevents the images from being cropped */
+	z-index: 2;
+Padding: 10;
+
+}
+
+
+/* ===== Scrollbar DISSABLE ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: none;
+    scrollbar-color: #000000 #ffffff;
+  }
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 0px;
+  }
+    
+  </style>

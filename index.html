@@ -32,7 +32,7 @@
  
 </br></br>
 
-<button id="expall" onclick="textflip()" class=" outline-[1px] py-8  text-white   text-[1.rem] font-black">Reveal All Projects</button> 
+<button id="expall" onclick="textflip()" class=" button outline-[1px] py-8  text-white   text-[1.rem] font-black ">Reveal All Projects</button> 
 
 </br>
 </br>
@@ -67,13 +67,23 @@
 <div class="gallery" onclick="openModal('modal RB')">
   <img src="rb001.jpg" class="thumbnail">
   <img src="rb002.jpg" class="thumbnail">
+  <div class="">
+  <!--   <iframe  src="https://www.youtube.com/embed/tYDYNF2g9Fw?rel=0&amp;controls=0&amp;showinfo=0&amp;modestbranding=1" class="thumbnail" style="width: 200px; height: 200px; left: 0px; top: 0px;  object-cover   
+      allow=accelerometer;"></iframe></div>
 </br>
 </div>
 </div>
- <!-- <iframe width="346" height="346" src="https://www.youtube.com/embed/tYDYNF2g9Fw" title="RB001" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media;" allowfullscreen></iframe>
-<iframe width="315" height="315" src="https://www.youtube-nocookie.com/embed/-VU5rZXmmLA?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen></iframe>  https://youtube.com/shorts/tYDYNF2g9Fw -->
-
+<div class = "flex justify-center"> 
+  <div>
+  <iframe width="346" height="346" src="https://www.youtube.com/embed/tYDYNF2g9Fw" title="RB001" frameborder="0"
+    allow="accelerometer; clipboard-write; encrypted-media;" allowfullscreen></iframe></div>
+  <div> <iframe width="315" height="315" src="https://www.youtube-nocookie.com/embed/-VU5rZXmmLA?rel=0&amp;controls=0&amp;showinfo=0&amp;modestbranding=1"
+    title="YouTube video player" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+    allowfullscreen></iframe></div> 
+  </div> -->
 </details>
+
 
 <details>
   <summary>SONIC THERMOMETER</summary>
@@ -177,7 +187,7 @@
 <details>
  <summary>FISHCASE</summary>
  <div class="pl-4">
-  <p class="pt-4"> Making the munndane absurd. Flexible rubber case for glasses. </p>
+  <p class="pt-4"> Making the mundane absurd. Flexible rubber case for glasses. </p>
 <div class="gallery" onclick="openModal('modal FC')">
 <img  src="fishgif.gif" class="thumbnail" style="width: 60%; max-width:500px; height: auto; vertical-align: middle;   object-fit: contain;" >
 </br>
@@ -528,6 +538,13 @@ a:active {
   align-items: center;
 }
 
+.button{}
+
+.button:hover {
+  color: rgb(0, 59, 255);
+  transform: scale(1.1); 
+  transition: transform 0.3s ease-in-out; /* This adds a transition effect when the hover state is triggered */
+}
 
 .thumbnail {
   width: 200px; /* This sets the width of the thumbnail images */
