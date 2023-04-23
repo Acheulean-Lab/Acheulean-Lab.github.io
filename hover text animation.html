@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My HTML Page</title>
+    <style>
+      /* CSS styles go here */
+      p {
+        font-family: 'Times';
+font-style: italic;
+font-weight: 400;
+font-size: 24px;
+line-height: 28px;
+text-align: justify;
+letter-spacing: 0.175em;
+max-width: 400px;
+min-width: 300px;
+margin: auto;
+  width: 50%;
+      }
+      
+    span:hover {
+  filter: blur(2.5px) 
+  opacity(40%);
+  transition: filter 0.5s ease-in-out;
+}
+
+  
+
+
+    </style>
+  </head>
+  <body>
+    <p class="blur ">
+        <span class=> Turn </span> <span class=>over </span> <span class=> stones,</span> <span class>open</span> <span class>drawers,</span> <span>sift</span> <span>through</span> <span>fragments,</span> <span>decipher</span> <span>glyphs</span> <span>in</span> <span>the</span> <span>concrete,</span> <span>pick</span> <span>out</span> <span>faces</span> <span>in</span> <span>the</span> <span>fire,</span> <span>greet</span> <span>the</span> <span>names</span> <span>on</span> <span>the</span> <span>wall,</span> <span>listen</span> <span>closely</span> <span>to</span> <span>the</span> <span>groans</span> <span>of</span> <span>weary</span> <span>timber,</span> <span>ask</span> <span>how</span> <span>or</span> <span>when</span> <span>or</span> <span>why</span> <span>this</span> <span>or</span> <span>that</span> <span>got</span> <span>here</span> <span>or</span> <span>there</span> <span>or</span> <span>nowhere</span> <span>to</span> <span>be</span> <span>found;</span> <span>an</span> <span>awareness</span> <span>of</span> <span>the</span> <span>everyday</span> <span>is</span> <span>at</span> <span>the</span> <span>foundation</span> <span>of</span> <span>a</span> <span>more</span> <span>complete</span> <span>world.</span> <span>When</span> <span>the</span> <span>mundane</span> <span>is</span> <span>acknowledged</span> <span>as</span> <span>extraordinary</span> <span>the</span> <span>habitual</span> <span>becomes</span> <span>novel.</span> <span>Often,</span> <span>the</span> <span>most</span> <span>engaging</span> <span>phenomena</span> <span>are</span> <span>the</span> <span>inexplicable</span> <span>and</span> <span>uncertain,</span> <span>and</span> <span>sometimes</span> <span>the</span> <span>most</span> <span>important</span> <span>thing</span> <span>is</span> <span>what</span> <span>we</span> <span>have</span> <span>learned</span> <span>to</span> <span>ignore.</span>
+                </p>
+                  </body>
+</html>
+
+<script>
+ 
+ var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+if (isMobile) {
+  setInterval(function() {
+    var spans = document.getElementsByTagName('span');
+    var selectedSpans = [];
+    
+    while (selectedSpans.length < 2) {
+      var randomIndex = Math.floor(Math.random() * spans.length);
+      var span = spans[randomIndex];
+      
+      if (!selectedSpans.includes(span)) {
+        selectedSpans.push(span);
+        
+        span.style.filter = 'blur(2.5px) opacity(40%)';
+        span.style.transition = 'filter 0.7s ease-in-out';
+        
+        setTimeout(function() {
+          span.style.filter = '';
+          span.style.transition = 'filter 0.7s ease-in-out';
+        }, 2500);
+      }
+    }
+    
+  }, 200);
+}
+
+  </script>
+</body>
+</html>
+
