@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <meta name="viewport" content="width=device-width">
+<meta name="viewport" content="initial-scale=1.0">
+<head> 
+<title>ACHEULEAN LAB</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="   w-100 sm:w-[70vw] px-8 sm:px-0 sm:max-w-3xl mx-auto">
+
+
+  <p class="text-[16px]/6 font-bold pb-2">Rockbell</p>
+
+  <div class="grid gap-x-8 grid-cols-1 lg:grid-cols-2 " >
+  <p class="text-[16px]/6  ">Strike one rock with another to trigger a ring. </br> Replace a button with a mindful act.</p>
+</div>
+<div class="gallery" >
+  <figure><img src="rb002.jpg" class="thumbnail">   <figcaption>caption for this image about a rock with a piece of tape on it.</figcaption></figure>
+  <figure><img src="rb001.jpg" class="thumbnail">   <figcaption>caption for this image about two rocks mounted to an orange sheet of metal with five bolts and some stainless steel cable.  </figcaption></figure>
+  <figure><img src="rb002.jpg" class="thumbnail">   <figcaption>caption for another image of the same rock with a piece of tape on it. </figcaption></figure>
+</div>
+
+</br>
+</br>
+
+
+<div id="Gallerymodal" class="modal fixed hidden z-50 inset-0 bg-black bg-opacity-80 h-full w-full px-0 modal" onclick="closeModal()">
+      <div id="modal-images" class="content-center flex  flex-row flex-nowrap overflow-y-none overflow-x-scroll gap-x-4 p-4">
+        <figure class="modalfig max-w-full sm:max-w-3xl">
+        </figure>
+    </div>
+  </div>
+  
+
+<!-- modalscript -->
+<script>
+    var galleries = document.querySelectorAll('.gallery');
+    var modal = document.getElementById('Gallerymodal');
+    var modalImages = document.getElementById('modal-images');
+    var body = document.body;
+  
+    // Add click event listeners to all gallery figures
+    galleries.forEach(function(gallery) {
+      var figures = gallery.getElementsByTagName('figure');
+      Array.from(figures).forEach(function(figure, index) {
+        figure.addEventListener('click', function() {
+          openModal(index, figures);
+        });
+      });
+    });
+  
+    function openModal(index, figures) {
+      modalImages.innerHTML = '';
+      Array.from(figures).forEach(function(figure) {
+        var clonedFigure = figure.cloneNode(true);
+        clonedFigure.classList.add('modalfig');
+        // Remove the "thumbnail" class from the cloned figure's images
+        var images = clonedFigure.getElementsByTagName('img');
+        Array.from(images).forEach(function(image) {
+          image.classList.remove('thumbnail');
+          image.classList.add('modalimg');
+        });
+  
+        // Assign class "modal.figcap" to the cloned figure's figcaption
+        var figcaptions = clonedFigure.getElementsByTagName('figcaption');
+        Array.from(figcaptions).forEach(function(figcaption) {
+          figcaption.classList.add('modalfigcap');
+        });
+  
+        modalImages.appendChild(clonedFigure);
+      });
+  
+      modal.style.display = 'block';
+      body.style.overflow = 'hidden'; // Prevent scrolling
+    }
+  
+    function closeModal() {
+      modal.style.display = 'none';
+      body.style.overflow = ''; // Revert back to default scrolling behavior
+    }
+  </script>
+  
+  
+
+
+</body>
+<style>
+
+  
+  
+  .gallery {
+  display: flex;
+ flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: left;
+ overflow-x: scroll; 
+  min-height: 260px; 
+  align-items: start;
+}
+
+.thumbnail {
+  height: 240px; /* This sets the height of the thumbnail images */
+  width: 100%;
+  object-fit: cover; 
+padding:8px;
+overflow:visible
+
+}
+
+.thumbnail:hover {
+  transform: scale(1.05); 
+  transition: transform 0.3s ease-in-out; /* This adds a transition effect when the hover state is triggered */
+  object-fit: cover; /* This prevents the images from being cropped */
+  z-index: 2;
+
+}
+
+figcaption {
+  background-color: none;
+  color: white;
+  font-size: 12px;
+  padding: 8px;
+  text-align: left;
+  width: 196px;
+  object-fit: none; /* This crops the images to a square shape */
+
+}
+
+.modal {    }
+.modalfig{ 
+    Background : none; 
+
+}
+.modalimg {
+    width: 100%;
+    min-width: 70vw;
+max-height:80vh;
+min-height: 320px;
+object-fit: contain; 
+pointer-events: none;
+object-position: left ;
+
+        }
+
+.modalfigcap{
+    padding: 0px;
+    text-align: left;
+    font-size: 16px;
+  width: 196px;
+}
+
+  body{
+  Background : black; 
+  Color: white;
+  Font-family: Times; 
+  }
+
+/* ===== Scrollbar DISSABLE ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: none;
+    scrollbar-color: #000000 #ffffff;
+  }
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 0px;
+  } 
+  </style>
+
+

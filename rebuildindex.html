@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html>
+  <meta name="viewport" content="width=device-width">
+<meta name="viewport" content="initial-scale=1.0">
+<head> 
+<title>ACHEULEAN LAB</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="   w-100 sm:w-[70vw] px-4 sm:px-0 sm:max-w-2xl mx-auto">
+
+  <div class="square  invisible sm:visible "id="square1"></div>
+  <div class="bar invisible sm:visible "id="bar1"></div>
+
+  <!-- SCROLL SCRIPT -->
+<script>
+
+    // When the user scrolls the page, execute myFunction 
+    window.onscroll = function() {myFunction()};
+    
+    
+    function myFunction() {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = ((winScroll / height) * 85) ;
+    
+    
+      document.getElementById("square1").style.top = scrolled  + "%";
+        
+    }
+    </script>
+    
+    
+    
+
+  <div class="fixed left-0 top-0 pt-0 mx-auto pb-0 w-full z-50 bg-black ">
+    <div class="text-center pt-0 font-family:Times New Roman text-lg/6 font-light " >ACHEULEAN LAB</div>
+    <hr class="h-0 mx-auto sm:w-[70vw] w-[94%] bg-white px-2">
+  </div>
+</br>
+</br>
+
+
+<img  src="ACHEULEANLABHEADER.gif" class= "pt-1 pb-2  w-[392px] ">
+
+<p class=" text-[40px] whitespace-nowrap max-w-[300px] sm:text-[48px] tracking-[-0.025em]  pt-8 pb-0 ">ACHEULEAN LAB</p>
+<div class = "w-98 sm:w-[392px] pt-6 mb-12 " >
+    <p class="text-[16px]/6 pt-0  "> A design research project examining material culture <br class="mobile-only"> to better understand
+        what objects mean, how they make us <br class="mobile-only"> feel, and how interpretations affect the way they work. <br class="mobile-only"> The work produced in
+        this lab is <span class="mobile-only"> by nature </span> an experiment. </br> 2022 → </p>   
+
+
+   
+
+      
+</div>
+
+<div class = "blurtext flex justify-left container ">   <p class="fuzz pb-14 ">
+  <span> Turn </span> <span>over </span> <span> stones,</span> <br>
+  <span>open</span> <span>drawers,</span> <br>
+  <span>sift</span> <span>through</span> <span>fragments,</span> <br>
+  <span>decipher</span> <span>glyphs</span> <span>in</span> <span>the</span> <span>concrete,</span> <br>
+  <span>pick</span> <span>out</span> <span>faces</span> <span>in</span> <span>the</span> <span>fire,</span> <br>
+   <span>greet</span> <span>the</span> <span>names</span> <span>on</span> <span>the</span> <span>wall,</span> <br>
+   <span>listen</span> <span>closely</span> <span>to</span> <span>the</span> <span>groans</span> <span>of</span> <span>weary</span> <span>timber,</span> <span>ask</span>  <br>
+  <span>how</span> <span>or</span> <span>when</span> <span>or</span> <span>why</span> <span>this</span> <span>or</span> <span>that</span> <span>got</span> <span>here</span> <span>or</span> <span>there</span><br>
+   <span>or</span> <span>nowhere</span> <span>to</span> <span>be</span> <span>found;</span> <br> 
+  <span>an</span> <span>awareness</span> <span>of</span> <span>the</span> <span>everyday</span> <br>
+  <span>is</span> <span>at</span> <span>the</span> <span>foundation</span> <span>of</span> <span>a</span> <span>more</span> <span>complete</span> <span>world.</span> <br>
+  <span>When</span> <span>the</span> <span>mundane</span> <span>is</span> <span>acknowledged</span> <br> 
+  <span>as</span> <span>extraordinary</span> <br>
+  <span>the</span> <span>habitual</span> <span>becomes</span> <span>novel.</span> <br>
+  <span>Often,</span> <br>
+  <span>the</span> <span>most</span> <span>engaging</span> <span>phenomena</span> <br>
+   <span>are</span> <span>the</span>   <span>inexplicable</span> <span>and</span> <span>uncertain,</span> <br>
+   <span>and</span> <span>sometimes</span> <br>
+  <span>the</span> <span>most</span> <span>important</span> <span>thing</span> <br>
+  <span>is</span> <span>what</span> <span>we</span> <span>have</span> <span>learned</span> <span>to</span> <span>ignore.</span>      </p>
+        
+</div> 
+<!-- BLUR SCRIPT -->
+
+<script>
+// blur text
+
+var selectedSpans = [];
+setInterval(function() {
+var spans = document.querySelectorAll('p.fuzz span');
+var newSpan = null;
+do {
+var randomIndex = Math.floor(Math.random() * spans.length) + Math.floor(Math.random() * 7) + 1;
+      newSpan = spans[randomIndex];
+} while (selectedSpans.includes(newSpan));
+
+selectedSpans.push(newSpan);
+newSpan.style.filter = 'blur(2.5px) opacity(40%)';
+newSpan.style.transition = 'filter 0.7s ease-in-out';
+
+setTimeout(function() {
+newSpan.style.filter = '';
+newSpan.style.transition = 'filter 0.7s ease-in-out';
+var indexToRemove = selectedSpans.indexOf(newSpan);
+selectedSpans.splice(indexToRemove, 1);
+}, 1000);
+}, 250); 
+
+const spans = document.querySelectorAll('p.fuzz span');
+
+for (let i = 0; i < spans.length; i++) {
+spans[i].addEventListener('mouseenter', function() {
+  this.style.filter = 'blur(2.5px) opacity(30%)';
+  this.style.transition = 'filter 0.75s ease-in-out';
+{
+    setTimeout(() => {
+      this.style.filter = 'none';
+      this.style.transition = 'filter 0.75s ease-in-out';
+    }, 3000);
+  }
+
+  if (this.classList.contains('turn-over-stones')) {
+  } else {
+    this.style.color = 'white';
+  }
+  setTimeout(() => {
+    this.style.color = '#FFF';
+  }, 30000);
+});
+}
+
+//blur mobile 
+if (window.matchMedia("(max-width: 768px)").matches) {
+var selectedSpans = [];
+setInterval(function() {
+var spans = document.querySelectorAll('p.fuzz span');
+var newSpan = null;
+do {
+var randomIndex = Math.floor(Math.random() * spans.length) + Math.floor(Math.random() * 7) + 1;
+      newSpan = spans[randomIndex];
+} while (selectedSpans.includes(newSpan));
+
+selectedSpans.push(newSpan);
+newSpan.style.filter = 'blur(2.5px) opacity(40%)';
+newSpan.style.transition = 'filter 0.7s ease-in-out';
+
+setTimeout(function() {
+newSpan.style.filter = '';
+newSpan.style.transition = 'filter 0.7s ease-in-out';
+var indexToRemove = selectedSpans.indexOf(newSpan);
+selectedSpans.splice(indexToRemove, 1);
+}, 2000);
+}, 250);
+}
+
+</script>
+
+<hr class="h-0 bg-white ">
+
+<div class="grid gap-x-8 grid-cols-1 md:grid-cols-2 pb-12" >
+        <P class=" text-[32px]/10  font-bold pb-2">Abstract <p>
+
+      <p class="text-[16px]/6  ">Project origins: The Acheulean Handaxe is a cordiform biface stone tool manufactured by ancient humans across Africa Europe and Asia during the Lower and Middle Pleistocene. In use for over a million and a half years, from 1.7 to 0.1 Mya without revision, the Acheulean Handaxe is the most prolific designed object in history. Despite global distribution, the function of these artifacts is not known. It is unclear if the tool was used for its blade, as an object of ceremony, to convey status or worth, or served some function not yet imagined. The razor-sharp circumference hosts an unwieldily edge, hinting that the purpose of the handaxe was more than pragmatic. The only certainty is the consistency of its form and technique of manufacture.</p>
+
+      <p class="text-[16px]/6 pt-6 md:pt-0  ">The Acheulean Handaxe is the origin of design; an object produced with intent through inherited cultural knowledge and technical skill. A constant presence in human lives for over a million years, this most modest object - a sharpened stone - still holds mystery. How absurd that the significance of something we carried for so long has been forgotten. Yet certitude that a renewed understanding will never be achieved makes the stone all the more alluring. Acheulean Lab pays homage to this universal human artifact that is both the archetype for successful design and a representation of the mundane.</p>
+  </div>
+
+
+
+
+<hr class="h-0 bg-white mt-2   ">
+<P class=" text-[32px]/10 font-bold pb-2">Areas of Research <p>
+
+  <div class="flex flex-col justify-between sm:flex-row sm:justify-start container   flex-wrap pb-6">
+    <div class="w-1/2 md:pr-4">
+      <a class="underline font-bold"href="#Actant_Objects"> Actant Objects </a></br>
+    </div>
+    <div class="md:pl-4"> 
+      <span class="block">Seeshell</span>
+
+    </div>
+  </div>
+
+  <div class="flex flex-col justify-between sm:flex-row sm:justify-start container   flex-wrap pb-6">
+        <div class="w-1/2 md:pr-4">
+       <a class="underline font-bold"href="#nongraphic_interfaces"> Non-Graphic Interfaces </a> 
+    </div>
+    <div class="md:pl-4"> 
+      <span class="block">Rockbell</span>
+      <span class="block">Sonic Thermometer</span> 
+
+    </div>
+  </div>
+
+  <div class="flex flex-col justify-between sm:flex-row sm:justify-start container   flex-wrap pb-6">
+    <div class="w-1/2 md:pr-4">
+      <a class="underline font-bold"href="#Frameworks"> Frameworks </a></br>
+    </div>
+    <div class="md:pl-4"> 
+      <span class="block">Cam Bench</span>
+    </div>
+  </div>
+
+  <div class="flex flex-col justify-between sm:flex-row sm:justify-start container   flex-wrap pb-6">
+    <div class="w-1/2 md:pr-4">
+      <a class="underline font-bold"href="#unclassified_experiments"> Unclassified Experiments </a></br>
+    </div>
+    <div class="md:pl-4"> 
+      <span class="block">Slip</span>
+      <span class="block">Fishcase</span> 
+
+    </div>
+  </div>
+
+
+<span id="Actant_Objects" ></span>
+<hr class="h-0 bg-white mt-6">
+<div class="w-100  pt-0" >
+  <P class=" text-[32px]/10  font-bold pb-2" >Actant Objects <p>
+<p class="text-[16px]/6 w-100 sm:w-3/4 pb-12"> Objects that affect or respond to their environment. The capacity for action and reaction imbues the inanimate world with a dynamism that prevents fatigue and prompts wonder.</p>
+</div>
+
+<p class="text-[24px]/6 font-bold pb-2"> Seeshell</p>
+<div class="grid gap-x-8 grid-cols-1  pb-6" >
+<p class="text-[16px]/6  "> <span class="font-bold pb-6">How can design preserve culture in a changing world? </span> </br>
+  Seeshell is a biocentric ocean health monitor that reinforces the human connection to the aquatic environment. Seashell introduces a new point of exchange with the ocean, bringing sea life above the surface to eye level interaction. By exposing the ability of shellfish to purify the oceans it creates a new value for native species if preserved and allowed to flourish. Seeshell displays the benefits of a non-exploitive ocean.
+</p>
+<div class="gallery pt-4" >
+  <figure><img src="calmpod images/cp003.jpg" class="thumbnail">   <figcaption>
+    Seeshell provides habitat for local shellfish. In this image the monitoring system is supported by a pillar that hosts a colony of mussels.  </figcaption></figure>
+  <figure><img src="calmpod images/cp002.jpg" class="thumbnail">   <figcaption>
+    An online map provides realtime and historic information about water quality, captured by the device, and accessed by the user through a QR code. </figcaption></figure>
+  <figure><img src="calmpod images/cp001.jpg" class="thumbnail">   <figcaption>The device installed on a cairn, assembled in situ from the stones of rocky beach.</figcaption></figure>
+  <figure><img src="calmpod images/cpl004.jpg" class="thumbnail">   <figcaption>Species-Specific architecture: Seeshell structure with hanging chains for mussel habitat.</figcaption></figure>
+<figure><img src="calmpod images/cpl001.jpg" class="thumbnail">   <figcaption>Species-Specific architecture: Seeshell structure with layered net for oyster habitat.</figcaption></figure>
+<figure><img src="calmpod images/cpl003.jpg" class="thumbnail">   <figcaption>Species-Specific architecture: Seeshell structure with stacked stone cairn for crab habitat.</figcaption></figure>
+</div>
+<p class="text-[16px]/6  ">
+</br> Poole, England: The development of this project began with an investigation into local history, and culminated with an ethnographic visit to better understand the reality of life on the southeast coast. Informal field notes were recorded, containing interactions with local residents, observations of the landscape, and the affect imparted by the landscape. 
+</br></br>
+A major port since the industrial revolution, known for its cockles and scallops, the shift to a tourism-driven economy now limits opportunity for younger generations to remain in Poole. Over harvesting has left fisheries thin, and waste from surrounding agriculture and water treatment facilities has leaked into Poole harbor, contaminated water and beaches. Fishing operations have dwindled. The last remaining shellfish exported from Poole harbor are manilla clams, a species imported from Japan via France in the late 20th century. No native shellfish are produced or harvested en masse from Poole.
+</br></br>
+But traces of the history of aquaculture still glimmer in old Poole, and shape the identity of residents. Through town the lampposts are cast with gilded scallops and cockles; iconography of the pool flag and 14th century coat of arms. At low tide figures can be seen digging razor clams, scallops and cockles from sandbanks across the harbor, the docks are lined with pots and nets, and the Fisherman Cafe bustles each morning as the tight community of local sport fisherman shake their chill over hot drinks.   
+A better understanding of life in Poole led to the question “how can preservation of the cultural connection to native shellfish build a more sustainable economic model for seaside towns?”
+</p>
+</div>
+<div class="gallery" >
+  <figure><img src="calmpod images/cpP1.jpg" class="thumbnail">   <figcaption>Poole flag: three scallops above a dolphin. These icons represent the ocean’s historical significance to the local way of life.</figcaption></figure>
+  <figure><img src="calmpod images/cpP02.JPG" class="thumbnail">   <figcaption>Poole lamp post, adorned with a dolphin, cockles, and scallops; motifs of the Poole flag.</figcaption></figure>
+  <figure><img src="calmpod images/cpP3.JPG" class="thumbnail">   <figcaption>Boots on the ground: the beach in Poole harbor, littered with fragments of shells.</figcaption></figure>
+  <figure><img src="calmpod images/cpip.gif" class="thumbnail">   <figcaption>Form Exploration: Beacons, way points, and landmarks served as a visual reference, implying to users that the tower was installed to provide site-specific information.</figcaption></figure>
+  <figure><img src="calmpod images/EP001.jpg" class="thumbnail">   <figcaption>Field notes.</figcaption></figure>
+  <figure><img src="calmpod images/EP002.jpg" class="thumbnail">   <figcaption>Field notes.</figcaption></figure>
+  <figure><img src="calmpod images/EP003.jpg" class="thumbnail">   <figcaption>Field notes.</figcaption></figure>
+
+</div>
+<div class="grid gap-x-8 grid-cols-1  pb-6 " >
+<p class="text-[16px]/6  "> Seeshell is a biocentric ocean health monitor that preserves interspecies awareness in coastal habitats. Seeshell hosts a colony of bivalves in a transparent enclosure, installed at intertidal zones.  Each installation is raised a meter from the ground, supported by a tower tailored to provide habitat for local species. A pile of stones offers crabs shelter from seabirds or a textured pillar lends mussels a perch to bite. Hidden pipes draw fresh seawater into the enclosure, circulating the colony with nutrients and particulate. 
+</p>
+  <p class="text-[16px]/6 pt-6  ">   The device monitors the level of local seawater pollution with the technique of valvometry: clams and mussels close their shells to provide cover from water contaminants, and by tracking movement with a computer-vision system Seeshell can estimate of changes to water quality, including presence of harmful chemicals like excess nitrogen. A network of sensors along a coastline can provide real-time and historic information about local conditions, serving as an early warning for sewage or agricultural contamination. This information is charted in an online map, and made accessible to the public through a scannable code on the enclosure. Seeshell can be used to track changing water conditions remotely, or verify in person if the water at a beach is safe for swimming, fishing, or wading. 
+  </p>
+<p class="text-[16px]/6 pt-6  "> This project was the outcome of a collaboration between the Royal College of Art and the RNLI (Royal National Lifeboat Institution), seeking new economic models for coastal communities.
+ </p>
+
+</div>
+
+
+<span id="nongraphic_interfaces"></span>
+<hr class="h-0 bg-white mt-6">
+<div class="w-100 " >
+  <P class=" text-[32px]/10  font-bold pb-2"  >Non-Graphic Interfaces <p>
+<p class="text-[16px]/6 w-100 sm:w-3/4 pb-12">Possibilities for human computer interaction that do not rely on visual systems. Alternatives to the digital displays that have come to dominate information transfer.</p>
+  </div>
+  
+  <p class="text-[24px]/6 font-bold pb-2">Rockbell</p>
+  <div class="grid gap-x-8 grid-cols-1  pb-6" >
+  <p class="text-[16px]/6  ">Strike one rock with another to trigger a ring. </br> Replace a button with a mindful act.</p>
+</div>
+<div class="gallery" >
+  <figure><img src="rb001.jpg" class="thumbnail">   <figcaption>Caption for this image about a rock with a piece of tape on it.</figcaption></figure>
+  <figure><img src="rbG001.gif" class="thumbnail "> <figcaption>RB002  </figcaption></figure>
+  <figure><img src="rb002.jpg" class="thumbnail">   <figcaption>RB001  </figcaption></figure>
+  <figure><img src="rb003.jpg" class="thumbnail">   <figcaption>RB001 </figcaption></figure>
+</div>
+
+</br>
+</br>
+
+<p class="text-[24px]/6 font-bold pb-2">Sonic Thermometer</p>
+<div class="grid gap-x-8 grid-cols-1  pb-6" >
+<p class="text-[16px]/6  ">How does the practice of healthcare change when we emphasize sensory information over absolute measurements and values? This thermometer reminds the user to pay close attention to signals from their body, and that sickness and health are more than binary. </p>
+<p class="text-[16px]/6 pt-6 ">This device produces two tones, one effected by the user’s temperature. The device is tuned so a healthy temperature will align the two sound waves and a slight fever will prevent the tones from synchronizing. Place device to forehead and listen (closely) to your body. </p>
+
+</div>
+<div class="gallery" >
+<figure><img src="at001.jpg" class="thumbnail">   <figcaption>ST001</figcaption></figure>
+<figure><img src="at004.jpg" class="thumbnail">   <figcaption>Listen to your body.  </figcaption></figure>
+<figure><img src="at003.jpg" class="thumbnail">   <figcaption>ST001</figcaption></figure>
+</div>
+
+
+</br>
+</br>
+<span id="Frameworks"></span>
+
+<hr class="h-0 bg-white mt-6">
+<div class="w-100  pt-0" >
+        <P class=" text-[32px]/10  font-bold pb-2" > Frameworks </p>
+      <p class="text-[16px]/6 w-100 sm:w-3/4 pb-12"> Systems for bilding: user-defined application.</p>
+  </div>
+
+  <p class="text-[24px]/6 font-bold pb-2">Cam Bench</p>
+  <div class="grid gap-x-8 grid-cols-1  pb-6" >
+  <p class="text-[16px]/6  ">A pair of triangular legs act as a fixture for furniture, providing a sturdy base to support leftovers, clutter, things seldom used, detritus, or shards thrown away. The legs secure a seat without tools or fasteners simply by rotating into place; to make building accessible to non-builders. Potential user-supplied seat materials include: cardboard boxes, fence posts, sticks and yard trimmings, books and paper, boats and oars, brooms and mops, camping equipment, car parts, broken furniture, pallets, bodies. </p>
+  <p class="text-[16px]/6 pt-6  ">  Inspired by a tricam, dedicated to Oblio and his arrow.  </p>
+  
+  </div>
+  <div class="gallery" >
+    <figure><img src="cambench/cb001BW.jpg" class="thumbnail">    <figcaption>CB001 Progress.</figcaption></figure>
+    <figure><img src="cambench/cb001bw3.jpg" class="thumbnail">   <figcaption>CB001 Progress.</figcaption></figure>
+      <figure><img src="cambench/cb003.jpg" class="thumbnail">   <figcaption>CB001 Progress.</figcaption></figure>
+  <figure><img src="cambench/cb002.jpg" class="thumbnail">   <figcaption>CB001 Progress.</figcaption></figure>
+  <figure><img src="cambench/cb004.jpg" class="thumbnail">    <figcaption>CB001 Progress.</figcaption></figure>
+  <figure><img src="cambench/cb005.jpg" class="thumbnail">   <figcaption>CB001 Progress.</figcaption></figure>
+  <figure><img src="cambench/cb006.jpg" class="thumbnail">   <figcaption>CB001 Progress.</figcaption></figure>
+  <figure><img src="cambench/cb007.jpg" class="thumbnail">   <figcaption>CB001 Progress.</figcaption></figure>
+  <figure><img src="cambench/cb008.jpg" class="thumbnail">   <figcaption>CB001 Progress.</figcaption></figure>
+  <figure><img src="cambench/cb009.jpg" class="thumbnail">   <figcaption>CB001 Progress.</figcaption></figure>
+  <figure><img src="cambench/cb0010.jpg" class="thumbnail">   <figcaption>CB001 Progress.</figcaption></figure>
+  <figure><img src="cambench/cb0011.jpg" class="thumbnail">    <figcaption>CB001 Progress.</figcaption></figure>
+  <figure><img src="cambench/cb-sequence.gif"  class="thumbnail">   <figcaption>CB001 Progress.</figcaption></figure>
+</div>
+
+<div class = "flex justify-left px-0 pt-12 "> 
+  <div>
+  <iframe class="w-full max-height-[346px]"   src="https://www.youtube.com/embed/PEYZ3VmOcMM" title="CB001" frameborder="0"
+    allow="accelerometer; clipboard-write; encrypted-media; " allowfullscreen></iframe></div>
+  
+  </div>
+
+
+
+</br></br>
+<span id="unclassified_experiments"></span>
+
+<hr class="h-0 bg-white mt-6">
+
+<div class="w-100  pt-0" >
+        <P class=" text-[32px]/10  font-bold pb-2"  > Unclassified Experiments </p>
+
+      <p class="text-[16px]/6 w-100 sm:w-3/4 pb-12">Projects for which a category has not yet been defined or where questions still search for their words. </p>
+  </div>
+
+  <p class="text-[24px]/6 font-bold pb-2">Faceless Slip</p>
+  <div class="grid gap-x-8 grid-cols-1  pb-6" >
+  <p class="text-[16px]/6  "> A sheer and near weightless slip dress, made of a fully waterproof material. Stronger than steel by weight. Transparent armor, delicate impermeability. The wearer is fully presented but unaffected by outside forces.</p>
+  <p class="text-[16px]/6 pt-6 ">  </p>
+  
+  </div>
+  <div class="gallery" >
+  <figure><img src="slip images/slip001.jpg" class="thumbnail">   <figcaption>Slip.</figcaption></figure>
+  <figure><img src="slip images/slip002.jpg" class="thumbnail">   <figcaption></figcaption></figure>
+  <figure><img src="slip images/slip003.jpg" class="thumbnail">   <figcaption></figcaption></figure>
+  <figure><img src="slip images/slip004.jpg" class="thumbnail">    <figcaption></figcaption></figure>
+  <figure><img src="slip images/slip005.jpg" class="thumbnail">    <figcaption></figcaption></figure>
+  <figure><img src="slip images/slip006.jpg" class="thumbnail">    <figcaption></figcaption></figure>
+  <figure><img src="slip images/slip007.jpg" class="thumbnail">    <figcaption></figcaption></figure>
+  <figure><img src="slip images/slip008.jpg" class="thumbnail">   <figcaption></figcaption></figure>
+
+</div>
+</br></br>
+
+<p class="text-[24px]/6 font-bold pb-2">Fishcase</p>
+<div class="grid gap-x-8 grid-cols-1 lg:grid-cols-2 pb-6" >
+<p class="text-[16px]/6  ">  Making the mundane absurd. Flexible rubber case for glasses.</p>
+<p class="text-[16px]/6 pt-6 ">  </p>
+
+</div>
+<div class="gallery" >
+<figure><img src="fishgif.gif" class="thumbnail">   <figcaption>Fish in use.</figcaption></figure>
+</div>
+</br></br>
+
+
+<div id="Gallerymodal" class="modal fixed hidden z-50 inset-0 bg-black bg-opacity-90 h-full w-full px-0 modal" onclick="closeModal()">
+  <div id="modal-images" class=" h-full flex object-cover flex-row justify-start flex-nowrap overflow-y-none overflow-x-scroll items-end gap-x-4 py-8 mx-2 sm:mx-8">
+
+</div>
+</div>
+
+<!-- modalscript -->
+<script>
+  var galleries = document.querySelectorAll('.gallery');
+  var modal = document.getElementById('Gallerymodal');
+  var modalImages = document.getElementById('modal-images');
+  var body = document.body;
+
+  // Add click event listeners to all gallery figures
+  galleries.forEach(function(gallery) {
+    var figures = gallery.getElementsByTagName('figure');
+    Array.from(figures).forEach(function(figure, index) {
+      figure.addEventListener('click', function() {
+        openModal(index, figures);
+      });
+    });
+  });
+
+  function openModal(index, figures) {
+    modalImages.innerHTML = '';
+
+    Array.from(figures).forEach(function(figure, figureIndex) {
+      var clonedFigure = document.createElement('div');
+      clonedFigure.classList.add('modal-figure');
+
+     
+      // Clone the image and caption into new elements
+      var image = document.createElement('img');
+      image.src = figure.querySelector('img').src;
+      image.alt = figure.querySelector('img').alt;
+      image.classList.add('modal-img');
+
+      var caption = document.createElement('p');
+      caption.textContent = figure.querySelector('figcaption').textContent;
+      caption.classList.add('modal-figcap');
+
+      // Append the image and caption to the clonedFigure
+      clonedFigure.appendChild(image);
+      clonedFigure.appendChild(caption);
+
+      // Append the clonedFigure to the container
+      modalImages.appendChild(clonedFigure);
+
+    });
+
+    modal.style.display = 'block';
+    body.style.overflow = 'hidden'; // Prevent scrolling
+  }
+
+  function closeModal() {
+    modal.style.display = 'none';
+    body.style.overflow = ''; // Revert back to default scrolling behavior
+  }
+</script>
+
+
+
+</body>
+<style>
+
+    .square {
+      margin-top: 36px;
+   top: 0px;
+      height: 12px;
+    width: 12px;
+    background-color: #FFFFFF;
+  position: fixed;
+      right: 15px;
+  z-index: 3;
+      transition: width 0.2s ease-out;
+  }
+  
+  .bar {
+   position: fixed;
+      top: 20px;
+      right: 15px;
+      height: 80%;
+  background: linear-gradient(180deg, #3719FB 22.4%, rgba(255, 71, 0, 0.306581) 65.1%, rgba(217, 217, 217, 0) 91.15%);  
+  width: 12px;
+      z-index: 2;   
+  }
+  
+  .gallery {
+  display: flex;
+ flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: left;
+  gap: 16px;
+ overflow-x: scroll; 
+  min-height: 260px; 
+  align-items: start;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  width: 100%;
+
+
+
+}
+
+.figure{
+}
+
+.thumbnail {
+  height: 240px; /* This sets the height of the thumbnail images */
+  width: 100%;
+  object-fit: cover; 
+  margin-top: 2px;
+  margin-bottom: 4px;
+
+
+}
+
+.thumbnail:hover {
+  transform: scale(1.05); 
+  transition: transform 0.3s ease-in-out; /* This adds a transition effect when the hover state is triggered */
+  object-fit: cover; /* This prevents the images from being cropped */
+  z-index: 2;
+
+}
+
+figcaption {
+  background-color: black;
+  color: white;
+  font-size: 12px;
+  text-align: left;
+  width: 196px;
+  object-fit: none; /* This crops the images to a square shape */
+vertical-align: top;
+
+}
+
+
+.modal-figure{ 
+  background-color:rgba(0, 0, 0, 0.0);
+  height: 90vh;
+display: flex;
+ flex-direction: column;
+margin-top: 4;
+max-width: 98vw;
+object-fit: contain;
+padding-top: 4;
+
+}
+
+.modal-img {
+padding-top: auto;
+height:75%;
+max-width: fit-content;
+object-fit: contain;
+
+
+}
+
+.modal-figcap{
+    padding-top: 16px;
+    text-align: left;
+    font-size: 16px;
+  width: 224px;
+  height: 140px;
+  max-height: 180px;
+  background-color:rgba(0, 0, 0, 0.0);
+  padding-right: auto;
+  margin-right: auto;
+}
+
+
+@media (max-width: 400px) {
+  /* Hide the specified elements on mobile */
+  .mobile-only {
+    display: none;
+  }
+}
+
+@media (min-width: 400px) {
+  /* Hide the specified elements on desktop */
+  .desk-only {
+    display: none;
+  }
+}
+
+  body{
+  Background : black; 
+  Color: white;
+  Font-family: Times; 
+  }
+
+/* ===== Scrollbar DISSABLE ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: none;
+    scrollbar-color: #000000 #ffffff;
+  }
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 0px;
+  } 
+  </style>
