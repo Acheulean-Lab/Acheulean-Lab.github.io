@@ -9,7 +9,25 @@
 </head>
 <body class="   w-100 sm:w-[70vw] px-8 sm:px-0 sm:max-w-3xl mx-auto  leading-tight">
 
+ <!-- SCROLL SCRIPT -->
+ <script>
 
+  // When the user scrolls the page, execute myFunction 
+  window.onscroll = function() {myFunction()};
+  
+  
+  function myFunction() {
+    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var scrolled = ((winScroll / height) * 85) ;
+  
+  
+    document.getElementById("square1").style.top = scrolled  + "%";
+      
+  }
+  </script>
+  
+  
 
 </br>
 
@@ -250,7 +268,7 @@ a:active {
   align-items: center;
 }
 
-.a{}
+
 
 .a:hover {
   color: rgb(0, 59, 255);
