@@ -165,56 +165,95 @@ selectedSpans.splice(indexToRemove, 1);
 
 
 
+<!-- The hover cursor-following box -->
+<div id="cursor-box" class="cursor-box"></div>
 
-  <div id="AoR">
+<div id="AoR">
+    <hr class="h-0 bg-white mt-2">
+    <p class="text-[32px]/10 font-bold pb-2">Areas of Research</p>
 
-
-<hr class="h-0 bg-white mt-2   ">
-<P class=" text-[32px]/10 font-bold pb-2">Areas of Research <p>
-
-  <div class="flex flex-col justify-between sm:flex-row sm:justify-start container   flex-wrap pb-6">
-    <div class="w-1/2 md:pr-4">
-      <a class="underline font-bold"href="#Actant_Objects"> Actant Objects </a></br>
-    </div>
-    <div class="md:pl-4"> 
-      <a class="block italic shimmer" href="#Seeshell" >Design to preserve culture in a changing world</a>
-
-    </div>
-  </div>
-
-  <div class="flex flex-col justify-between sm:flex-row sm:justify-start container   flex-wrap pb-6">
+    <div class="flex flex-col justify-between sm:flex-row sm:justify-start container flex-wrap pb-6">
         <div class="w-1/2 md:pr-4">
-       <a class="underline font-bold"href="#nongraphic_interfaces"> Non-Graphic Interfaces </a> 
+            <a class="underline font-bold" href="#Actant_Objects"> Actant Objects </a><br>
+        </div>
+        <div class="md:pl-4">
+            <a class="block  shimmer hover-div" data-images="hoverdivs/smcp002.jpg,hoverdivs/smcp003.jpg" href="#Seeshell">Design to preserve culture in a changing world</a>
+        </div>
     </div>
-    <div class="md:pl-4"> 
-      <a class="block italic shimmer" href="#Rockbell"> Replace a button with a mindful act </a>
-      <a class="block italic shimmer" href="#Sonicthermo">Listen to your Body</a> 
 
+    <div class="flex flex-col justify-between sm:flex-row sm:justify-start container flex-wrap pb-6">
+        <div class="w-1/2 md:pr-4">
+            <a class="underline font-bold" href="#nongraphic_interfaces"> Non-Graphic Interfaces </a>
+        </div>
+        <div class="md:pl-4">
+            <a class="block  shimmer hover-div" data-images="hoverdivs/smrb001.jpg,hoverdivs/smrb00k.jpg" href="#Rockbell"> Replace a button with a mindful act </a>
+            <a class="block  shimmer hover-div" data-images="at002.jpg,at003.jpg" href="#Sonicthermo"> Listen to your Body</a>
+        </div>
     </div>
-  </div>
 
-  <div class="flex flex-col justify-between sm:flex-row sm:justify-start container   flex-wrap pb-6">
-    <div class="w-1/2 md:pr-4">
-      <a class="underline font-bold"href="#Frameworks"> Frameworks </a></br>
+    <div class="flex flex-col justify-between sm:flex-row sm:justify-start container flex-wrap pb-6">
+        <div class="w-1/2 md:pr-4">
+            <a class="underline font-bold" href="#Frameworks"> Frameworks </a><br>
+        </div>
+        <div class="md:pl-4">
+            <a class="block  shimmer hover-div" data-images="hoverdivs/smRS005_panel.jpg,hoverdivs/smRS004_right.jpg" href="#RSB"> A new visual language for wood composites</a>
+            <a class="block  shimmer hover-div" data-images="hoverdivs/smcb001.jpg,hoverdivs/smcb006.jpg" href="#Cambench">Out of the cupboard and into the living room</a>
+        </div>
     </div>
-    
-    <div class="md:pl-4"> 
-      <a class="block italic shimmer" href="#RSB"> A new visual language for wood composites</a>
-      <a class="block italic shimmer" href="#Cambench">Out of the cupboard and into the living room</a>
-    </div>
-  </div>
 
-  <div class="flex flex-col justify-between sm:flex-row sm:justify-start container   flex-wrap pb-6">
-    <div class="w-1/2 md:pr-4">
-      <a class="underline font-bold"href="#unclassified_experiments"> Unclassified Experiments </a></br>
+    <div class="flex flex-col justify-between sm:flex-row sm:justify-start container flex-wrap pb-6">
+      <div class="w-1/2 md:pr-4">
+        <a class="underline font-bold" href="#unclassified_experiments"> Unclassified Experiments </a><br>
+        </div>
+        <div class="md:pl-4">
+            <a class="block shimmer hover-div" data-images="hoverdivs/slip001-2.jpg" href="#slip">Delicate impermeability</a>
+            <a class="block shimmer hover-div"  data-images="" href="#fishcase">Making the Mundane Absurd</a>
+        </div>
     </div>
-    <div class="md:pl-4"> 
-      <a class="block italic shimmer" href="#slip">Delicate impermeability</a>
-      <a class="block italic shimmer" href="#fishcase">Making the Mundane Absurd</a> 
-
-    </div>
-  </div>  
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+const hoverDivs = document.querySelectorAll('.hover-div');
+const cursorBox = document.getElementById('cursor-box');
+let intervalId;
+
+function switchImages(images) {
+    let currentImageIndex = 1;
+
+    function updateImage() {
+        cursorBox.style.backgroundImage = `url(${images[currentImageIndex]})`;
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+    }
+
+    updateImage();
+    intervalId = setInterval(updateImage, 500);
+}
+
+hoverDivs.forEach((div) => {
+    div.addEventListener('mouseover', (e) => {
+        // Check if the parent of the hovered element is the #AoR div
+        if (e.target.closest('#AoR')) {
+            cursorBox.style.display = 'block';
+            const images = div.getAttribute('data-images');
+            cursorBox.style.backgroundImage = `url(${images ? images.split(',')[0] : div.getAttribute('data-image')})`;
+            if (images) switchImages(images.split(','));
+        }
+    });
+
+    div.addEventListener('mouseout', () => {
+        cursorBox.style.display = 'none';
+        cursorBox.style.backgroundImage = '';
+        clearInterval(intervalId);
+    });
+});
+
+document.addEventListener('mousemove', (e) => {
+    cursorBox.style.left = (e.clientX + 12) + 'px';
+    cursorBox.style.top = (e.clientY + 16) + 'px';
+});
+});
+</script>
 
 
   <div id="main">
@@ -466,6 +505,9 @@ selectedSpans.splice(indexToRemove, 1);
     </div>
     </div>
     
+    
+
+
      <!-- randomshimmerspeed -->
  <script>
   function applyRandomDuration() {
@@ -477,7 +519,7 @@ selectedSpans.splice(indexToRemove, 1);
   }
       applyRandomDuration();
 </script>
-    
+
     <!-- modalscripthtml -->
     <div id="Gallerymodal" class="modal fixed hidden z-50 inset-0 bg-black bg-opacity-90 h-full w-full px-0 modal" onclick="closeModal()">
       <div id="modal-images" class=" h-full flex object-cover flex-row justify-start flex-nowrap overflow-y-none overflow-x-scroll items-end gap-x-4 py-8 mx-2 sm:mx-8">
@@ -560,7 +602,7 @@ selectedSpans.splice(indexToRemove, 1);
       top: 20px;
       right: 15px;
       height: 80%;
-  background: linear-gradient(180deg, #3719FB 22.4%, rgba(255, 71, 0, 0.306581) 65.1%, rgba(217, 217, 217, 0) 91.15%);  
+  background: linear-gradient(180deg, #3719FB 22.4%, rgba(255, 72, 0, 0.306) 65.1%, rgba(217, 217, 217, 0) 91.15%);  
   width: 12px;
       z-index: 2;   
   }
@@ -617,7 +659,26 @@ vertical-align: top;
 
 }
 
-.blurtext{ cursor:default;}
+.blurtext{ cursor:pointer;}
+
+    /* Styling for the hover box */
+    .cursor-box {
+        width: 260px;
+        height: 260px;
+        position: fixed;
+        display: none;
+        pointer-events: none;
+        z-index: 9999;
+        border-radius: 4px;
+        background-size: cover;
+        background-position: center; 
+    }
+
+    /* Style for the hover-div*/
+    .hover-div {
+        cursor: pointer;
+padding-top: 6px;
+    }
 
 
 .shimmer {
@@ -633,7 +694,6 @@ vertical-align: top;
             background-size: 200% auto;
             color: #000;
             background-clip: text;
-            text-fill-color: transparent;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             animation: textclip 1s linear infinite;
@@ -678,7 +738,6 @@ object-fit: contain;
   margin-right: auto;
 }
 
-
 @media (max-width: 400px) {
   /* Hide the specified elements on mobile */
   .mobile-only {
@@ -697,6 +756,7 @@ object-fit: contain;
   Background : black; 
   Color: white;
   Font-family: Times; 
+  
   }
 
 /* ===== Scrollbar DISSABLE ===== */
