@@ -140,8 +140,8 @@ for (let i = 0; i < dominantFrequencies.length; i++) {
     const frequency = dominantFrequencies[i].frequency;
 
         // Check if the most dominant frequency has significance over 4
-        if (i === 0 && significanceRecord[frequency] > 4) {
-            significanceRecord[frequency] -= 0.3;
+        if (i === 0 && significanceRecord[frequency] > 3.8) {
+            significanceRecord[frequency] -= 0.2;
         }
 
     if (significanceRecord[frequency]) {
@@ -156,8 +156,8 @@ for (let i = 0; i < dominantFrequencies.length; i++) {
     // Decrease significance ratings for frequencies not in dominantFrequencies
     for (const frequency in significanceRecord) {
         if (!dominantFrequencies.some(freqObj => freqObj.frequency === parseFloat(frequency))) {
-            // Frequency is not present in dominantFrequencies, decrease its significance by 1
-            significanceRecord[frequency] = Math.max(1, significanceRecord[frequency] - 4);
+            // Frequency is not present in dominantFrequencies, decrease its significance by 3
+            significanceRecord[frequency] = Math.max(1, significanceRecord[frequency] - 3);
         }
     }
 
