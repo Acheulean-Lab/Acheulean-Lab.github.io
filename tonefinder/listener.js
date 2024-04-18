@@ -141,7 +141,7 @@ for (let i = 0; i < dominantFrequencies.length; i++) {
 
         // Check if the most dominant frequency has significance over 4
         if (i === 0 && significanceRecord[frequency] > 3.8) {
-            significanceRecord[frequency] -= 0.2;
+            significanceRecord[frequency] -= 0.1;
         }
 
     if (significanceRecord[frequency]) {
@@ -157,7 +157,7 @@ for (let i = 0; i < dominantFrequencies.length; i++) {
     for (const frequency in significanceRecord) {
         if (!dominantFrequencies.some(freqObj => freqObj.frequency === parseFloat(frequency))) {
             // Frequency is not present in dominantFrequencies, decrease its significance by 3
-            significanceRecord[frequency] = Math.max(1, significanceRecord[frequency] - 3);
+            significanceRecord[frequency] = Math.max(1, significanceRecord[frequency] - 1);
         }
     }
 
@@ -185,7 +185,7 @@ for (let i = 0; i < dominantFrequencies.length; i++) {
 }
 
 window.key_note = 0;
-significancethresh = 4;
+significancethresh = 3.8;
 
 //get highest significance note over 20
 function maxNote(significanceList) {

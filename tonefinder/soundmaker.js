@@ -2,10 +2,12 @@
 // Move Tone-related code outside of the event listener
 const gainNode = new Tone.Gain(6).toDestination();  
 
-const volume = new Tone.Volume(12); // Set volume to -4 dB
-
-// Connect the volume node to the destination (speakers or headphones)
-volume.toDestination();
+// Function to calculate gain based on frequency
+function calculateGain(key_note) {
+    const z = 5; // volume add
+    const gain = 254 * Math.pow(0.986, key_note) + 2 + z;
+    return gain;
+}
 
 // Define a function to update key_note
 function updateKeyNote() {
@@ -14,14 +16,16 @@ function updateKeyNote() {
     console.log("New Key Note:", key_note); // Log the key_note
 
     // Check if key_note is not the default value and below 100
-   
 
     if (key_note !== 0) { // Check if key_note is not the default value
 
-        if (key_note < 130) {
-            key_note *= 2; // Double the key_note
-        }
-      
+    // Calculate gain based on key_note
+    const scaledGain = calculateGain(key_note);
+
+    // Update gain node with scaled gain
+    gainNode.gain.value = scaledGain;
+
+            
 
         const third = key_note *= 1.25;
         const noise2 = new Tone.Noise("white").start();
