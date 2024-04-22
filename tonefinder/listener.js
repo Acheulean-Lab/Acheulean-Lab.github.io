@@ -197,7 +197,7 @@ function maxNote(significanceList) {
         key_note = significanceList[0].frequency;
         window.key_note = key_note;
         // Update the significance of the identified key_note by subtracting .4
-        significanceList[0].significance -= 0.5;
+        significanceList[0].significance -= 0.4;
         console.log("Key Note:", key_note);
         addMessageDiv('Tone Identified. Creating Chord');
     } else {
