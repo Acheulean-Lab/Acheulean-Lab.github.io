@@ -12,8 +12,8 @@ document.getElementById('startButton').addEventListener('click', async () => {
         await Tone.start(); 
 
         // Apply frequency mask for desired range 
-        const lowFrequencyMask = 20; // Minimum frequency to include (in Hz)
-        const highFrequencyMask = 1000; // Maximum frequency to include (in Hz)
+        const lowFrequencyMask = 120; // Minimum frequency to include (in Hz)
+        const highFrequencyMask = 1200; // Maximum frequency to include (in Hz)
 
         const analyzer = new Tone.Analyser('fft', 4096); // 4096 is a common FFT size
 
@@ -31,7 +31,7 @@ document.getElementById('startButton').addEventListener('click', async () => {
             accumulatedBuffer.push(...buffer); // Accumulate audio data
             
             // Check if accumulated buffer duration exceeds the window size
-            const windowSize = Math.round(44100 * 4 / 4096); // 3 seconds (assuming buffer.length = 4096)
+            const windowSize = Math.round(44100 * 2 / 4096); // 3 seconds (assuming buffer.length = 4096)
             if (accumulatedBuffer.length >= windowSize) {
                 // Extract a window of data from the accumulated buffer
                 const windowedBuffer = accumulatedBuffer.slice(0, windowSize);
@@ -140,7 +140,7 @@ for (let i = 0; i < dominantFrequencies.length; i++) {
     const frequency = dominantFrequencies[i].frequency;
 
         // Check if the most dominant frequency has significance over 4
-        if (i === 0 && significanceRecord[frequency] > 3.8) {
+        if (i === 0 && significanceRecord[frequency] > 3.9) {
             significanceRecord[frequency] -= 0.1;
         }
 
@@ -156,7 +156,7 @@ for (let i = 0; i < dominantFrequencies.length; i++) {
     // Decrease significance ratings for frequencies not in dominantFrequencies
     for (const frequency in significanceRecord) {
         if (!dominantFrequencies.some(freqObj => freqObj.frequency === parseFloat(frequency))) {
-            // Frequency is not present in dominantFrequencies, decrease its significance by 3
+            // Frequency is not present in dominantFrequencies, decrease its significance by 1
             significanceRecord[frequency] = Math.max(1, significanceRecord[frequency] - 1);
         }
     }
@@ -185,7 +185,7 @@ for (let i = 0; i < dominantFrequencies.length; i++) {
 }
 
 window.key_note = 0;
-significancethresh = 3.8;
+significancethresh = 3.6;
 
 //get highest significance note over 20
 function maxNote(significanceList) {
