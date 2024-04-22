@@ -31,7 +31,7 @@ document.getElementById('startButton').addEventListener('click', async () => {
             accumulatedBuffer.push(...buffer); // Accumulate audio data
             
             // Check if accumulated buffer duration exceeds the window size
-            const windowSize = Math.round(44100 * 2 / 4096); // 3 seconds (assuming buffer.length = 4096)
+            const windowSize = Math.round(44100 * 3 / 4096); // 3 seconds (assuming buffer.length = 4096)
             if (accumulatedBuffer.length >= windowSize) {
                 // Extract a window of data from the accumulated buffer
                 const windowedBuffer = accumulatedBuffer.slice(0, windowSize);
