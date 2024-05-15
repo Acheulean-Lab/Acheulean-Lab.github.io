@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.typekit.net/lxn5gfp.css">
+    <script src="https://unpkg.com/tone"></script>
+    <title>Room Tone</title>
+    <style>
+        /* Add some basic styling to the table */
+        #noteTable {
+            width: 100px;
+            border-collapse: collapse;
+        }
+        #noteTable th, #noteTable td {
+            border: 1px solid #ddd;
+            padding: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ROOM TONE</h1>
+
+        <button id="startButton">Start Analysis</button>
+        <div id="fftDisplay"></div>
+    </br>
+        <div id="message-container"></div>
+
+        <div id="keyNoteOutput">Key Note: <span id="keyNoteValue"></span></div> <div id="keyNoteConfidence"></div>
+        <h3>Note Presence</h3>
+        <table id="noteTable">
+            <thead>
+                <tr>
+                    <th>Note</th>
+                    <th>Value</th> 
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+
+    <script src="Harmonizersignalsub.js"></script>
+
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfP1jHGWkfz65VhBoUM5k6rQzaANNqXhMH6k7fH_F43sv5UHQ/viewform?embedded=true" width="600" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
+</body>
+</html>
