@@ -386,7 +386,7 @@ function hann(i, N) {
   // Function to create adjusted gain level for sound output
 
   function calculateGain(key_note) {
-    const z = 5; // volume add
+    const z = -5; // volume add
     const gain = 254 * Math.pow(0.986, key_note) + 2 + z;
     return gain;
 }
