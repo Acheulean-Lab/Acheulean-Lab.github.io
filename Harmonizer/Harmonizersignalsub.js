@@ -437,8 +437,8 @@ function updateKeyNote() {
       // Connect noise1Gain to monoSignal, then to Soundout
       noise1Gain.connect(monoSignal);
   
-      noise1.stop("+0.99"); // Swapped stop times to stop noise1 first
-      noise2.stop("+0.95");
+      noise1.stop("+0.95"); // Swapped stop times to stop noise1 first
+      noise2.stop("+0.90");
   
       monoSignal.connect(Soundout);
         
